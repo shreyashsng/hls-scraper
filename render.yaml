@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: m3u8-backend
+    env: node
+    buildCommand: npm install
+    startCommand: node index.js
+    envVars:
+      - key: PORT
+        value: 3000
+    plan: free
+    buildFilter:
+      paths:
+      - package.json
+      - index.js
+    scaling:
+      minInstances: 1
+      maxInstances: 1 
