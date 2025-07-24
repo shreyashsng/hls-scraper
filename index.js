@@ -8,6 +8,7 @@ const port = process.env.PORT || 3000;
 
 const BASE_URL = process.env.HLS_BASE_URL;
 
+app.use(cors()); //for devleopment allow all origin
 app.use(express.json());
 
 async function getMovieData(tmdbId) {
