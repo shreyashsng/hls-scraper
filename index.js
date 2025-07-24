@@ -99,11 +99,11 @@ async function getMovieData(tmdbId) {
     // Navigate to the movie page and wait for network to be idle
     await page.goto(`${BASE_URL}/movie/${tmdbId}`, { 
       waitUntil: 'networkidle2',
-      timeout: 30000 
+      timeout: 60000 
     });
     
     // Additional wait to ensure dynamic content loads
-    await new Promise(resolve => setTimeout(resolve, 15000));
+    await new Promise(resolve => setTimeout(resolve, 20000));
     
     await browser.close();
 
