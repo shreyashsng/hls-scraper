@@ -44,9 +44,9 @@ async function getMovieData(tmdbId) {
     };
 
     // Add chromium executable path for Render
-    if (process.env.RENDER) {
-      options.executablePath = process.env.PUPPETEER_EXECUTABLE_PATH || '/usr/bin/google-chrome-stable';
-    }
+    // if (process.env.RENDER) {
+    //   options.executablePath = process.env.PUPPETEER_EXECUTABLE_PATH || '/usr/bin/google-chrome-stable';
+    // }
 
     browser = await puppeteer.launch(options);
     const page = await browser.newPage();
