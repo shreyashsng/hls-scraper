@@ -147,6 +147,10 @@ app.get('/movie/:tmdbId', async (req, res) => {
   }
 });
 
+app.get('/ping', (req, res) => {
+  res.send("OK");
+});
+
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 }); 
