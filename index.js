@@ -1,6 +1,6 @@
 const express = require('express');
 const puppeteer = require('puppeteer');
-import cors from 'cors';
+const cors = require('cors');
 const { saveVideo, getVideoByTmdbId } = require('./db');
 require('dotenv').config();
 
